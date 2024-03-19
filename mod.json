@@ -18,6 +18,7 @@
 			"description": "Only adds objects that cannot be replicated using listed objects",
 			"type":"bool",
 			"default": false
+			"removeUnstable":{ "name": "Remove unstable blocks", "description": "Removes blocks that are likely to cause the game to crash. I do not reccomended turning this off", "type": "bool", "default": true }
 		}
 	}, 
 	"repository": "https://github.com/legowiifun/Geometry-Dash-Unlisted-Objects-in-Editor"
