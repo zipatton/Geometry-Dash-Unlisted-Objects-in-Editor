@@ -38,8 +38,7 @@ EditorUI* editorUI=nullptr;
 cocos2d::CCArray* objArr;
 auto active = Mod::get()->getSettingValue<bool>("activate");
 auto unecessary = Mod::get()->getSettingValue<bool>("doNotInclude");
-// auto noUnstable = Mod::get()->getSettingValue<bool>("removeUnstable");
-auto noUnstable=true;
+auto noUnstable = Mod::get()->getSettingValue<bool>("removeUnstable");
 
 $execute{
 	listenForSettingChanges("activate", +[](bool value) {
@@ -48,9 +47,9 @@ $execute{
 	listenForSettingChanges("doNotInclude", +[](bool value) {
 		unecessary=value;
 	});
-//		listenForSettingChanges("removeUnstable", +[](bool value) {
-//		noUnstable=value;
-//	});
+		listenForSettingChanges("removeUnstable", +[](bool value) {
+		noUnstable=value;
+});
 }
 
 // gets a reference to the editor UI
